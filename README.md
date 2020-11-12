@@ -1,6 +1,6 @@
 # ProbiusZero
 
-This project melds the DeepMind [PySC2 StarCraft II learning environment](https://github.com/deepmind/pysc2), DeepMind's [Asynchronous Advantage Actor-Critic (A3C) algorithm](https://arxiv.org/abs/1602.01783), OpenAI [Gym](https://gym.openai.com/), and the best strategy in StarCraft II &mdash; the [cannon rush](https://liquipedia.net/starcraft2/Photon_Cannon_Rush).
+<!-- This project melds the DeepMind [PySC2 StarCraft II learning environment](https://github.com/deepmind/pysc2), DeepMind's [Asynchronous Advantage Actor-Critic (A3C) algorithm](https://arxiv.org/abs/1602.01783), OpenAI [Gym](https://gym.openai.com/), and the best strategy in StarCraft II &mdash; the [cannon rush](https://liquipedia.net/starcraft2/Photon_Cannon_Rush).
 
 ![image: starcrafts](https://media.giphy.com/media/1r2wBGvOQjBu0/giphy.gif)
 
@@ -114,3 +114,4 @@ It's a contain!
 ![](play/ramp.png)
 
 Learning to wall off cannons using map features, sharpening the build order, and implementing follow up all-ins can be achieved with more compute resources and time.
+ -->
