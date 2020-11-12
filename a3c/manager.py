@@ -1,4 +1,4 @@
-"""A3C master.
+"""A3C manager.
 
 """
 
@@ -18,8 +18,8 @@ from worker import Worker
 FLAGS = flags.FLAGS
 
 
-class Master():
-  """A3C master."""
+class Manager():
+  """A3C manager."""
   def __init__(self):
     if FLAGS.cartpole:
       self.env = gym.make('CartPole-v0')

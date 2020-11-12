@@ -1,5 +1,81 @@
 # ProbiusZero
 
+StarCraft II is a rich environment for reinforcement learning. The game offers [large action and state spaces, imperfect information, and delayed credit assignment](https://arxiv.org/abs/1708.04782), all challenges which generalize to a wide class of problems.
+
+This project combines:
+* DeepMind's [PySC2 StarCraft II learning environment](https://github.com/deepmind/pysc2)
+* DeepMind's [Acme reinforcement learning framework](https://github.com/deepmind/acme)
+
+To attempt to solve simple tasks in StarCraft II. This is in hopes of disproving, even if only a little bit, the following statement:
+
+"Even with a strong self-play system and a diverse league of main and exploiter agents, there would be almost no chance of a system developing successful strategies in such a complex environment without some prior knowledge." [\[1\]](https://deepmind.com/blog/article/AlphaStar-Grandmaster-level-in-StarCraft-II-using-multi-agent-reinforcement-learning)
+
+This project uses the following techniques:
+
+* The [Asynchronous Advantage Actor-Critic (A3C) algorithm](https://arxiv.org/abs/1602.01783) RL algorithm
+* The[IMPALA](https://arxiv.org/abs/1802.01561) RL algorithm
+* [Auto-regressive policy heads](https://arxiv.org/abs/1903.11524)
+
+To learn the following tasks in StarCraft II:
+
+* Pylon construction
+* The best strategy in StarCraft II &mdash; the [cannon rush](https://liquipedia.net/starcraft2/Photon_Cannon_Rush)
+
+![image: starcrafts](https://media.giphy.com/media/1r2wBGvOQjBu0/giphy.gif)
+
+
+contributions
+
+
+gym env
+
+
+## A3C
+
+a3c
+
+
+## AR IMPALA
+
+impala ar
+
+
+
+## Code structure
+
+file structure
+
+
+
+
+
+## Play
+
+<!-- With minimal training, the smart agent is able to improve its resources lost balance over the game compared to a random agent. However, it is easy for the agent to get stuck repeating the same action over and over. I chose a low discount factor to prevent initial invalid actions (such as building a Forge before building a Pylon) from dominating. -->
+
+<!-- Moving average episode reward over 400 episodes. -->
+
+<!-- ![](play/reward.png) -->
+
+Learning to build Pylons.
+
+![](play/pylons.png)
+
+No shame in building the Forge behind your oppenents' mineral line.
+
+![](play/forge.png)
+
+It's a contain!
+
+![](play/ramp.png)
+
+Learning to wall off cannons using map features, sharpening the build order, and implementing follow up all-ins can be achieved with more compute resources and time.
+
+
+
+CLEAN 
+
+
 <!-- This project melds the DeepMind [PySC2 StarCraft II learning environment](https://github.com/deepmind/pysc2), DeepMind's [Asynchronous Advantage Actor-Critic (A3C) algorithm](https://arxiv.org/abs/1602.01783), OpenAI [Gym](https://gym.openai.com/), and the best strategy in StarCraft II &mdash; the [cannon rush](https://liquipedia.net/starcraft2/Photon_Cannon_Rush).
 
 ![image: starcrafts](https://media.giphy.com/media/1r2wBGvOQjBu0/giphy.gif)

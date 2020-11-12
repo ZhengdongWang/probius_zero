@@ -15,7 +15,7 @@ import os
 from absl import app
 from absl import flags
 
-from master import Master
+from manager import Manager
 
 # See info level logging.
 logging.getLogger().setLevel(logging.INFO)
@@ -47,24 +47,9 @@ flags.DEFINE_string('replay_dir', '', 'Directory to save replays to.')
 
 def main(_):
   """Run A3C."""
-  master = Master()
-  master.train()
+  manager = Manager()
+  manager.train()
 
 
 if __name__ == '__main__':
   app.run(main)
-
-# CANNON RUSHER ZERO: NO IMITATION
-
-# todo get alphastar architecture and training
-# todo simplify for my architecture and training
-# todo self play best stability
-# todo code it!
-
-# todo karpathy recipe
-# todo rediscover old papers
-
-# todo vs bot
-# todo vs ai ladder
-
-# todo goal: make it work, learn, get job and skills, win ai bots
