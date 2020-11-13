@@ -13,7 +13,7 @@ To attempt to solve simple tasks in StarCraft II. This is in hopes of disproving
 This project uses the following techniques:
 
 * The [Asynchronous Advantage Actor-Critic (A3C) algorithm](https://arxiv.org/abs/1602.01783) RL algorithm
-* The[IMPALA](https://arxiv.org/abs/1802.01561) RL algorithm
+* The [IMPALA](https://arxiv.org/abs/1802.01561) RL algorithm
 * [Auto-regressive policy heads](https://arxiv.org/abs/1903.11524)
 
 To learn the following tasks in StarCraft II:
@@ -23,12 +23,7 @@ To learn the following tasks in StarCraft II:
 
 ![image: starcrafts](https://media.giphy.com/media/1r2wBGvOQjBu0/giphy.gif)
 
-
-contributions
-
-
-gym env
-
+This project provides the first public implementation of the IMPALA and auto-regressive policy heads on the StarCraft II environment. Further, it is the first application of A3C, IMPALA, and auto-regressive policy heads compatible with the raw action space new to PySC2 v3.0. The environment wrappers currently access a subset of the full StarCraft II action and observation space. The code structure keeps sustainable ways to scale up RL algorithms to the entire space in mind, however. Existing public PySC2 RL frameworks largely focus on minigames (MoveToBeacon, CollectMineralShards, etc.).
 
 ## A3C
 
@@ -46,10 +41,11 @@ impala ar
 file structure
 
 
-
-
-
 ## Play
+
+INCULDE GRAPHS OF LEARNING
+
+
 
 <!-- With minimal training, the smart agent is able to improve its resources lost balance over the game compared to a random agent. However, it is easy for the agent to get stuck repeating the same action over and over. I chose a low discount factor to prevent initial invalid actions (such as building a Forge before building a Pylon) from dominating. -->
 
