@@ -33,6 +33,10 @@ Adapted for PySC2 from [Morvan Zhou's simple discrete A3C](https://github.com/Mo
 
 Auto-regressive heads implemented with guidance from the [AlphaStar <i>Nature</i> paper and supplemental data](https://doi.org/10.1038/s41586-019-1724-z)
 
+The AR IMPALA network takes scalar features (number of probes, number of pylons) and spatial data as observations. These are inputs to a MLP and convolutional network, respectively. The MLP and CNN output is input to an LSTM core. The LSTM core output is input for the action type head, which samples an action, which it feeds to the location head along with an embedding. The location head samples a map point with a deconvolutional network.
+
+<img align='center' src='play/ar_impala_network.png'>
+
 This implementation currently has action type and location heads. This is a simplified version of the full AlphaStar architecture, which employs delay, queue, selected units, and target unit heads.
 
 ## Code structure
@@ -71,23 +75,21 @@ Moving average episode reward for AR IMPALA, pylon task
 
 <img align='center' src='play/ar_impala_moving_avg.png'>
 
-![](play/ar_impala_moving_avg.png)
-
 Moving average episode reward for A3C, cannon task
 
-![](play/a3c_moving_avg.png)
+<img align='center' src='play/a3c_moving_avg.png'>
 
 Learning to build Pylons.
 
-![](play/pylons.png)
+<img align='center' src='play/pylons.png'>
 
 No shame in building the Forge behind your oppenents' mineral line.
 
-![](play/forge.png)
+<img align='center' src='play/forge.png'>
 
 It's a contain!
 
-![](play/ramp.png)
+<img align='center' src='play/ramp.png'>
 
 Learning to wall off cannons using map features, sharpening the build order, and implementing follow up all-ins can be achieved with more compute resources and time.
 
