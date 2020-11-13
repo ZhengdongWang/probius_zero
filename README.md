@@ -27,7 +27,7 @@ This project provides the first public implementation of the IMPALA and auto-reg
 
 ## A3C
 
-a3c
+Adapted for PySC2 from [Morvan Zhou's simple discrete A3C](https://github.com/MorvanZhou/pytorch-A3C).
 
 
 ## AR IMPALA
@@ -43,15 +43,27 @@ file structure
 
 ## Play
 
+
+
+
+
+With minimal training on Colab
+
 INCULDE GRAPHS OF LEARNING
 
 
 
 <!-- With minimal training, the smart agent is able to improve its resources lost balance over the game compared to a random agent. However, it is easy for the agent to get stuck repeating the same action over and over. I chose a low discount factor to prevent initial invalid actions (such as building a Forge before building a Pylon) from dominating. -->
 
-<!-- Moving average episode reward over 400 episodes. -->
 
-<!-- ![](play/reward.png) -->
+Moving average episode reward for AR IMPALA, pylon task
+
+![](play/ar_impala_moving_avg.png)
+
+Moving average episode reward for A3C, cannon task
+
+![](play/a3c_moving_avg.png)
+
 
 Learning to build Pylons.
 
