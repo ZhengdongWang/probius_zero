@@ -21,9 +21,7 @@ To learn the following tasks in StarCraft II:
 * Pylon construction
 * The best strategy in StarCraft II &mdash; the [cannon rush](https://liquipedia.net/starcraft2/Photon_Cannon_Rush)
 
-<div style='align-items: center'>
-  ![image: starcrafts](https://media.giphy.com/media/1r2wBGvOQjBu0/giphy.gif)
-</div>
+<img align='center' src='https://media.giphy.com/media/1r2wBGvOQjBu0/giphy.gif'>
 
 This project provides the first public implementation of the IMPALA and auto-regressive policy heads on the StarCraft II environment. Further, it is the first application of A3C, IMPALA, and auto-regressive policy heads compatible with the raw action space new to PySC2 v3.0. The environment wrappers currently access a subset of the full StarCraft II action and observation space. The code structure keeps sustainable ways to scale up RL algorithms to the entire space in mind, however. Existing public PySC2 RL frameworks largely focus on minigames (MoveToBeacon, CollectMineralShards, etc.).
 
@@ -70,6 +68,8 @@ This implementation currently has action type and location heads. This is a simp
 With minimal training, the A3C agent is able to improve its resources lost balance over the game compared to a random agent. The AR IMPALA agent is able to consistently achieve the maximum score on the pylon construction task.
 
 Moving average episode reward for AR IMPALA, pylon task
+
+<img align='center' src='play/ar_impala_moving_avg.png'>
 
 ![](play/ar_impala_moving_avg.png)
 
