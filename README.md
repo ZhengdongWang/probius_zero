@@ -21,7 +21,9 @@ To learn the following tasks in StarCraft II:
 * Pylon construction
 * The best strategy in StarCraft II &mdash; the [cannon rush](https://liquipedia.net/starcraft2/Photon_Cannon_Rush)
 
-<img align='center' src='https://media.giphy.com/media/1r2wBGvOQjBu0/giphy.gif'>
+<p align='center'>
+  <img align='center' src='https://media.giphy.com/media/1r2wBGvOQjBu0/giphy.gif'>
+</p>
 
 This project provides the first public implementation of the IMPALA and auto-regressive policy heads on the StarCraft II environment. Further, it is the first application of A3C, IMPALA, and auto-regressive policy heads compatible with the raw action space new to PySC2 v3.0. The environment wrappers currently access a subset of the full StarCraft II action and observation space. The code structure keeps sustainable ways to scale up RL algorithms to the entire space in mind, however. Existing public PySC2 RL frameworks largely focus on minigames (MoveToBeacon, CollectMineralShards, etc.).
 
@@ -35,7 +37,9 @@ Auto-regressive heads implemented with guidance from the [AlphaStar <i>Nature</i
 
 The AR IMPALA network takes scalar features (number of probes, number of pylons) and spatial data as observations. These are inputs to a MLP and convolutional network, respectively. The MLP and CNN output is input to an LSTM core. The LSTM core output is input for the action type head, which samples an action, which it feeds to the location head along with an embedding. The location head samples a map point with a deconvolutional network.
 
-<img align='center' src='play/ar_impala_network.png'>
+<p align='center'>
+  <img src='play/ar_impala_network.png'>
+</p>
 
 This implementation currently has action type and location heads. This is a simplified version of the full AlphaStar architecture, which employs delay, queue, selected units, and target unit heads.
 
@@ -73,23 +77,33 @@ With minimal training, the A3C agent is able to improve its resources lost balan
 
 Moving average episode reward for AR IMPALA, pylon task
 
-<img align='center' src='play/ar_impala_moving_avg.png'>
+<p align='center'>
+  <img align='center' src='play/ar_impala_moving_avg.png'>
+</p>
 
 Moving average episode reward for A3C, cannon task
 
-<img align='center' src='play/a3c_moving_avg.png'>
+<p align='center'>
+  <img align='center' src='play/a3c_moving_avg.png'>
+</p>
 
 Learning to build Pylons.
 
-<img align='center' src='play/pylons.png'>
+<p align='center'>
+  <img align='center' src='play/pylons.png'>
+</p>
 
 No shame in building the Forge behind your oppenents' mineral line.
 
-<img align='center' src='play/forge.png'>
+<p align='center'>
+  <img align='center' src='play/forge.png'>
+</p>
 
 It's a contain!
 
-<img align='center' src='play/ramp.png'>
+<p align='center'>
+  <img align='center' src='play/ramp.png'>
+</p>
 
 Learning to wall off cannons using map features, sharpening the build order, and implementing follow up all-ins can be achieved with more compute resources and time.
 
