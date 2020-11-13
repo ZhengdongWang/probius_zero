@@ -31,6 +31,10 @@ This project provides the first public implementation of the IMPALA and auto-reg
 
 Adapted for PySC2 from [Morvan Zhou's simple discrete A3C](https://github.com/MorvanZhou/pytorch-A3C). You can find Arthur Juliani's more detailed explanation of A3C [here](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-8-asynchronous-actor-critic-agents-a3c-c88f72a5e9f2).
 
+The main function creates a global network and starts as many workers as there are CPUs. Each worker uses a simple network of four linear feedforward layers. Each worker creates its own PySC2Env, and recommends an action to the smart agent based on its local network. It chooses a random action for the second agent. After every user-defined number of global iterations, all workers update the global network parameters.
+
+The A3C agent attempts to solve the cannon rushing task. It is limited to the actions no operation, build Probe, build pylon, build forge, and build photon cannon. The reward is defined as the change in the resources lost balance between the two agents. A positive reward is returned if the resources lost balance changed in favor of the smart agent in the last step (that is, the agent destroyed more value in units and structures than it lost in the last step). While this reward definition may not lead to higher winrates when compared to a sparse reward of +1 win, -1 loss, it allows for faster initial training.
+
 ## AR IMPALA
 
 Auto-regressive heads implemented with guidance from the [AlphaStar <i>Nature</i> paper and supplemental data](https://doi.org/10.1038/s41586-019-1724-z)
@@ -42,6 +46,8 @@ The AR IMPALA network takes scalar features (number of probes, number of pylons)
 </p>
 
 This implementation currently has action type and location heads. This is a simplified version of the full AlphaStar architecture, which employs delay, queue, selected units, and target unit heads.
+
+The AR IMPALA agent attempts to solve the pylon construction task. It is limited to the actions no operation, build Probe, and build pylon. The reward is defined as the number of pylons constructed at the end of the game. To speed up training, the game steps and step multipiler are shortened such that the agent can only build seven pylons per game.
 
 ## Code structure
 
