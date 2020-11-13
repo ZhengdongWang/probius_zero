@@ -21,7 +21,9 @@ To learn the following tasks in StarCraft II:
 * Pylon construction
 * The best strategy in StarCraft II &mdash; the [cannon rush](https://liquipedia.net/starcraft2/Photon_Cannon_Rush)
 
-![image: starcrafts](https://media.giphy.com/media/1r2wBGvOQjBu0/giphy.gif)
+<div style='align-items: center'>
+  ![image: starcrafts](https://media.giphy.com/media/1r2wBGvOQjBu0/giphy.gif)
+</div>
 
 This project provides the first public implementation of the IMPALA and auto-regressive policy heads on the StarCraft II environment. Further, it is the first application of A3C, IMPALA, and auto-regressive policy heads compatible with the raw action space new to PySC2 v3.0. The environment wrappers currently access a subset of the full StarCraft II action and observation space. The code structure keeps sustainable ways to scale up RL algorithms to the entire space in mind, however. Existing public PySC2 RL frameworks largely focus on minigames (MoveToBeacon, CollectMineralShards, etc.).
 
